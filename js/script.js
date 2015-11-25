@@ -62,16 +62,16 @@ var winner = function() {
 		currentPlayer = "o";
 		$('.winnerTwoInvisible').css("visibility", "visible");
 	}
-	$('.square').text("");	
-	$('.winnerOneInvisible').css("visibility", "hidden");
-	$('.winnerTwoInvisible').css("visibility", "hidden");
+	setTimeout(function(){$('.square').text("")},1000);
+	setTimeout(function(){$('.winnerOneInvisible').css("visibility", "hidden")},1000);
+	setTimeout(function(){$('.winnerTwoInvisible').css("visibility", "hidden")},1000);
+	
 };
 
 //New Game
 $('.newGame').click(function() {
 	$('.square').text("");
-	$('.winnerOneInvisible').css("visibility", "hidden");
-	$('.winnerTwoInvisible').css("visibility", "hidden");
+
 });
 
 
