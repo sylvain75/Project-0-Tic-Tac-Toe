@@ -2,6 +2,8 @@ var turn = 0;
 var playerOneTotal = 0;
 var playerTwoTotal = 0;
 
+$('.score1').html()
+
 // X clickable
 $('.square').click(function() {	
 	if (turn === 0 && $(this).text() == "") {
@@ -64,11 +66,15 @@ var winner = function() {
 	} else {
 		currentPlayer = "o";
 		playerTwoTotal += 1;
+
 		$('.winnerTwoInvisible').css("visibility", "visible");
 	}
 	setTimeout(function(){$('.square').text("")},1000);
 	setTimeout(function(){$('.winnerOneInvisible').css("visibility", "hidden")},1000);
 	setTimeout(function(){$('.winnerTwoInvisible').css("visibility", "hidden")},1000);
+	$('.score1').html(playerOneTotal);
+	$('.score2').html(playerTwoTotal);
+
 	if (playerOneTotal === 3) {
 		victoryOne();
 		// ;alert("The player one is the winner")
@@ -81,7 +87,9 @@ var winner = function() {
 //New Game
 $('.newGame').click(function() {
 	$('.square').text("");
-
+	playerOneTotal = 0;
+	playerTwoTotal = 0;
+	
 });
 
 function victoryOne(){

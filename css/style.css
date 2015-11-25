@@ -10,28 +10,33 @@ body {
 #container {
 	width:400px;
 	margin:0 auto;
-	overflow:hidden;
 }
 h1 {
 	color:#0029FF;
 	padding-left: 70px;
 }
-.vs {
-	width: 160px;
-	height: 30px;
-	background-color: #0B65B6;
-	color: white;
-	border: 2px solid black;
-	border-radius: 20%
-}
+
 .play1Invisible {
 	visibility: hidden;
 }
 .play2Invisible {
 	visibility: hidden;	
 }
-table {
-	
+#board {
+	position: relative;
+}
+
+#tableScore p{
+	color:black;
+	font-weight: bold;
+	width: 110px;
+}
+
+#tableScore{
+	position: absolute;
+	top: 70px;
+	left: 450px;
+
 }
 
 .square {
@@ -66,7 +71,7 @@ table {
 }
 
 .winnerOne {
-	margin-left: 300px;
+	margin-left: 400px;
 	font-size: 2em;
 	color: red;
     display:none;
@@ -74,9 +79,10 @@ table {
     height:100%;
     position:absolute;
     top:100%;
+    z-index: 2;
 }
 .winnerTwo {
-	margin-left: 300px;
+	margin-left: 400px;
 	font-size: 2em;
 	color:red;
     display:none;
