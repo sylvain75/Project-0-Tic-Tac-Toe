@@ -1,4 +1,6 @@
 var turn = 0;
+var playerOneTotal = 0;
+var playerTwoTotal = 0;
 
 // X clickable
 $('.square').click(function() {	
@@ -57,15 +59,23 @@ var winner = function() {
 	var currentPlayer;
 	if ( turn === 1 ) {
 		currentPlayer = "x";
+		playerOneTotal += 1;
 		$('.winnerOneInvisible').css("visibility", "visible");
 	} else {
 		currentPlayer = "o";
+		playerTwoTotal += 1;
 		$('.winnerTwoInvisible').css("visibility", "visible");
 	}
 	setTimeout(function(){$('.square').text("")},1000);
 	setTimeout(function(){$('.winnerOneInvisible').css("visibility", "hidden")},1000);
 	setTimeout(function(){$('.winnerTwoInvisible').css("visibility", "hidden")},1000);
-	
+	if (playerOneTotal === 3) {
+		victoryOne();
+		// ;alert("The player one is the winner")
+	}else if (playerTwoTotal === 3) {
+		victoryTwo();
+		// alert("The player two is the winner")
+	};
 };
 
 //New Game
@@ -73,6 +83,17 @@ $('.newGame').click(function() {
 	$('.square').text("");
 
 });
+
+function victoryOne(){
+    $('.winnerOne').css('top', '');
+    $('.winnerOne').show().animate({top:"-100%"}, 5000, victoryOne);
+}
+function victoryTwo(){
+    $('.winnerTwo').css('top', '');
+    $('.winnerTwo').show().animate({top:"-100%"}, 5000, victoryTwo);
+}
+
+
 
 
 

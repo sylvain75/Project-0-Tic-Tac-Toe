@@ -4,11 +4,13 @@
 body {
 	background-image: url(http://content.chupamobile.com/user-upload2/product-image-screenshot/Kt9JZSjh84SuZQtOptFd3xQj_3_bg3.png);
 	background-size: cover;
+	background-repeat: no-repeat;;
 }
 
 #container {
 	width:400px;
 	margin:0 auto;
+	overflow:hidden;
 }
 h1 {
 	color:#0029FF;
@@ -19,17 +21,16 @@ h1 {
 	height: 30px;
 	background-color: #0B65B6;
 	color: white;
-	
 	border: 2px solid black;
 	border-radius: 20%
 }
 .play1Invisible {
 	visibility: hidden;
-	padding-bottom: -10px;
-	
 }
 .play2Invisible {
-	visibility: hidden;
+	visibility: hidden;	
+}
+table {
 	
 }
 
@@ -40,6 +41,7 @@ h1 {
     background-color: #4abacf;
 	text-align: center;
 	font-size: 70px;
+	opacity: 0.7;
 }
 
 .newGame {
@@ -55,8 +57,31 @@ h1 {
 
 .winnerOneInvisible {
 	visibility: hidden;
+	font-size: 1.3em;
 }
 
 .winnerTwoInvisible {
 	visibility: hidden;
+	font-size: 1.3em;
+}
+
+.winnerOne {
+	margin-left: 300px;
+	font-size: 2em;
+	color: red;
+    display:none;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:100%;
+}
+.winnerTwo {
+	margin-left: 300px;
+	font-size: 2em;
+	color:red;
+    display:none;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:100%;
 }
