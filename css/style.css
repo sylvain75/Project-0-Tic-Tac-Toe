@@ -2,7 +2,8 @@
 	color: #808080;
 }
 body {
-	
+	background-image: url(http://content.chupamobile.com/user-upload2/product-image-screenshot/Kt9JZSjh84SuZQtOptFd3xQj_3_bg3.png);
+	background-size: cover;
 }
 
 #container {
@@ -24,6 +25,7 @@ h1 {
 }
 .play1Invisible {
 	visibility: hidden;
+	padding-bottom: -10px;
 	
 }
 .play2Invisible {
