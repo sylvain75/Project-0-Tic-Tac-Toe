@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Morpions for everbody!!!</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div id="container">
+		<h1>Le Morpion</h1>
+		<p>"Morpion" is the French name of the Tic-Tac-Toe game.</p>
+
+		<p>How many player(s) for this game?</p>
+		<button class="vs">Vs A.I. </button>
+		<button class="vs">Vs a friend</button>
+
+		<div class="play1Invisible"><p style="color:green">player one has to play</p></div>
+		<div class="play2Invisible"><p style="color:pink">player two or AI has to play</p></div>
+
+		<div id="board">
+	    <table>
+	      <tr id="row1">
+	        <td class="square a"></td>
+	        <td class="square b"></td>
+	        <td class="square c"></td>
+	      </tr>
+	      <tr id="row2">
+	        <td class="square d"></td>
+	        <td class="square e"></td>
+	        <td class="square f"></td>
+	      </tr>
+	      <tr id="row3">
+	        <td class="square g"></td>
+	        <td class="square h"></td>
+	        <td class="square i"></td>
+	      </tr>
+	    </table>
+
+	   </div>
+
+	   <button class="newGame">New Game</button>
+
+		<div class="winnerOneInvisible">
+			<p style="color:green">Player one is the winner</p>
+		</div>
+
+		<div class="winnerTwoInvisible">
+			<p style="color:pink">Player two is the winner</p>
+		</div>
+
+  </div>
+	
+	<script src="js/script.js"></script>
+</body>
+</html>

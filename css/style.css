@@ -1,0 +1,60 @@
+* {
+	color: #808080;
+}
+body {
+	
+}
+
+#container {
+	width:600px;
+	margin:0 auto;
+}
+h1 {
+	color:#0029FF;
+	padding-left: 70px;
+}
+.vs {
+	width: 160px;
+	height: 30px;
+	background-color: #0B65B6;
+	color: white;
+	margin-bottom: 20px;
+	border: 2px solid black;
+	border-radius: 20%
+}
+.play1Invisible {
+	visibility: hidden;
+	
+}
+.play2Invisible {
+	visibility: hidden;
+	
+}
+
+.square {
+    width:100px;
+    height:100px;
+    border:2px solid grey;
+    background-color: #4abacf;
+	text-align: center;
+	font-size: 70px;
+}
+
+.newGame {
+	margin-top: 20px;
+	width: 160px;
+	height: 30px;
+	background-color: white;
+	color: #0B65B6;
+	border: 2px solid #0B65B6;
+	border-radius: 20%;
+	margin-left: 82px;
+}
+
+.winnerOneInvisible {
+	visibility: hidden;
+}
+
+.winnerTwoInvisible {
+	visibility: hidden;
+}
