@@ -4,7 +4,7 @@ var playerTwoTotal = 0;
 
 $('.score1').html()
 
-// X clickable
+// squares clickable
 $('.square').click(function() {	
 	if (turn === 0 && $(this).text() == "") {
 		$('.play1Invisible').css("visibility", "hidden");
@@ -20,7 +20,7 @@ $('.square').click(function() {
 	rules();
 });
 
-//rules
+//winning rules
 var rules = function() {
 	var result = false;
 	var $aText = $('.a').text();
@@ -66,7 +66,6 @@ var winner = function() {
 	} else {
 		currentPlayer = "o";
 		playerTwoTotal += 1;
-
 		$('.winnerTwoInvisible').css("visibility", "visible");
 	}
 	setTimeout(function(){$('.square').text("")},1000);
@@ -77,26 +76,45 @@ var winner = function() {
 
 	if (playerOneTotal === 3) {
 		victoryOne();
-		// ;alert("The player one is the winner")
 	}else if (playerTwoTotal === 3) {
 		victoryTwo();
-		// alert("The player two is the winner")
 	};
 };
 
 //New Game
+var gameReset = false;
 $('.newGame').click(function() {
+	gameReset = true;
+	turn = 0;
+	$('.play2Invisible').css("visibility", "hidden");
+	$('.play1Invisible').css("visibility", "visible");
 	$('.square').text("");
+	$('.score1').html(0);
+	$('.score2').html(0);
 	playerOneTotal = 0;
 	playerTwoTotal = 0;
-	
+	$('.winnerTwoInvisible').css("visibility", "hidden");
+	$('.winnerOneInvisible').css("visibility", "hidden");
+	$('.winnerOne').css('display', 'none');
+	$('.winnerTwo').css('display', 'none');
 });
 
+//victory rolling text
 function victoryOne(){
+	// Stop the animation if the game has been reset.
+	if (gameReset === true) {
+		gameReset = false;
+		return;
+	}
     $('.winnerOne').css('top', '');
     $('.winnerOne').show().animate({top:"-100%"}, 5000, victoryOne);
 }
 function victoryTwo(){
+	// Stop the animation if the game has been reset.
+	if (gameReset === true) {
+		gameReset = false;
+		return;
+	}
     $('.winnerTwo').css('top', '');
     $('.winnerTwo').show().animate({top:"-100%"}, 5000, victoryTwo);
 }
