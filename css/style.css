@@ -98,6 +98,11 @@ table:hover{
 	font-size: 1.5em;
 }
 
+#draw {
+	visibility: hidden;
+	color: red !important;;
+}
+
 .winnerOne {
 	margin-left: 400px;
 	font-size: 2.5em;

@@ -17,7 +17,7 @@ $('.square').click(function() {
 		$(this).text("o");
 		turn = 0;
 	}
-	rules();
+	rules(); //Winning rules function to check if there is any winner
 });
 
 //winning rules
@@ -53,6 +53,10 @@ var rules = function() {
 
 	if ( result ) {
 		winner();
+	} else if($aText !== ""&& $bText !== "" && $cText !== "" && $dText !== "" && $eText !== "" && $fText !== "" && $gText !== "" && $hText !== "" && $iText !== "" && result === false) {
+		$('#draw').css("visibility", "visible");
+		setTimeout(function(){$('.square').text("")},1000);
+		setTimeout(function(){$('#draw').css("visibility", "hidden")},1000);
 	};
 };
 
